@@ -1,6 +1,9 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useFormik } from "formik";
 import * as Yup from "yup";
+
+import newWindowIcon from "../../../images/new-window-link.svg";
 
 const Step3 = (props) => {
   const { email, nextStep } = props;
@@ -57,9 +60,11 @@ const Step3 = (props) => {
       </form>
 
       <div className="modal-subtext">
-        Didn't get the email? <br />
-        Check your spam folder. If you still can't find it, <br />
-        <a>resend the email.</a>
+        By continuing, you’ll be creating or accessing a <br />
+        <a src="#">
+          Trailblazer account
+          <img src={newWindowIcon} />
+        </a>
       </div>
     </div>
   );

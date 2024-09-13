@@ -1,6 +1,9 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useFormik } from "formik";
 import * as Yup from "yup";
+
+import newWindowIcon from "../../../images/new-window-link.svg";
 
 const Step2 = (props) => {
   const { nextStep } = props;
@@ -156,6 +159,14 @@ const Step2 = (props) => {
           </button>
         </div>
       </form>
+
+      <div className="modal-subtext">
+        By continuing, you’ll be creating or accessing a <br />
+        <a src="#">
+          Trailblazer account
+          <img src={newWindowIcon} />
+        </a>
+      </div>
     </div>
   );
 };

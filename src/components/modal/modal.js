@@ -7,7 +7,6 @@ import Step1 from "./views/step1";
 import Step2 from "./views/step2";
 import Step3 from "./views/step3";
 import Step4 from "./views/step4";
-import Step5 from "./views/step5";
 
 const Modal = (props) => {
   const { closeModal } = props;
@@ -37,8 +36,7 @@ const Modal = (props) => {
           )}
           {stepCount === 2 && <Step2 nextStep={nextStep} />}
           {stepCount === 3 && <Step3 nextStep={nextStep} email={email} />}
-          {stepCount === 4 && <Step4 nextStep={nextStep} />}
-          {stepCount === 5 && <Step5 />}
+          {stepCount === 4 && <Step4 />}
         </div>
       </div>
     </div>
