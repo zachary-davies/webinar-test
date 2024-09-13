@@ -1,0 +1,213 @@
+.nav__login {
+  cursor: pointer;
+}
+.nav {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background-color: white;
+  z-index: 100;
+  font-family: var(--wes-g-font-family-sans);
+  color: var(--sds-g-link-color-active);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.nav__placeholder {
+  min-height: 56px;
+}
+
+.nav__buffer {
+  padding: 0 40px;
+  width: 100%;
+}
+
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+}
+
+.nav__content {
+  display: flex;
+  align-items: center;
+}
+
+.nav__logoContainer {
+  height: 32px;
+  width: 45px;
+}
+
+.nav__logoWords {
+  display: none;
+}
+
+.nav__hamburger {
+  margin-right: 25px;
+}
+.nav__utilityList {
+  display: flex;
+  list-style-type: none;
+  flex-flow: row;
+}
+
+.nav__utility {
+  display: flex;
+  align-items: center;
+}
+
+.nav__utilityItem {
+  display: flex;
+  align-items: center;
+}
+
+.nav__cta {
+  width: 100px;
+  height: 29px;
+  background-color: var(--sds-g-color-palette-green-50);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  margin-left: 16px;
+}
+
+.nav__cta:hover {
+  cursor: pointer;
+  background-color: var(--sds-g-color-palette-green-40);
+}
+
+.nav__hide {
+  display: none;
+}
+
+.nav__moreItem,
+.nav__tablet {
+  display: none;
+}
+
+.nav__search,
+.nav__globe {
+  padding: 8px 12px;
+}
+
+.nav__search:hover,
+.nav__globe:hover {
+  cursor: pointer;
+}
+
+.nav__userImage {
+  margin-right: 1px;
+  margin-left: 10px;
+}
+
+.nav__login {
+  display: none;
+}
+
+.nav__globe {
+  display: none;
+}
+
+@media (max-width: 1400px) {
+  .nav__moreItem {
+    display: list-item;
+  }
+
+  .nav__moreArrow::before {
+    display: block;
+    float: right;
+    content: url(https://a.sfdcstatic.com/shared/images/pbc/icons/chevron-right.svg);
+    transform: rotate(90deg) scale(0.8);
+    margin-left: 7px;
+  }
+}
+
+@media (min-width: 1401px) {
+  .nav__tablet {
+    display: list-item;
+  }
+}
+
+@media (min-width: 1280px) {
+  .nav__hamburger {
+    display: none;
+  }
+
+  .nav__logoWords {
+    display: inline;
+  }
+
+  .nav__logoWords:hover {
+    cursor: pointer;
+  }
+
+  .nav__logo {
+    display: none;
+  }
+
+  .nav__placeholder {
+    min-height: 96px;
+  }
+  .nav__container {
+    height: 96px;
+  }
+
+  .nav__logoContainer {
+    height: 44px;
+    width: 68px;
+  }
+
+  .nav__itemList {
+    display: flex;
+    list-style-type: none;
+    flex-flow: row;
+    padding-left: 24px;
+  }
+
+  .nav__itemList li {
+    padding: 0 16px;
+  }
+
+  .nav__itemList li:hover {
+    color: var(--sds-g-color-palette-blue-50);
+    cursor: pointer;
+  }
+
+  .nav__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: #032d60;
+    margin: 0 16px;
+  }
+
+  .nav__contact a {
+    text-decoration: underline;
+    color: #032d60;
+  }
+
+  .nav__contact a:hover {
+    color: #0176d3;
+  }
+
+  .nav__login {
+    display: inline;
+  }
+
+  .nav__globe {
+    display: inline;
+  }
+
+  .nav__cta {
+    width: 135px;
+    height: 45px;
+    font-size: 16px;
+  }
+}

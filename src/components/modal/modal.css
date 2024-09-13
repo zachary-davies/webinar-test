@@ -1,0 +1,222 @@
+option:disabled {
+  color: red;
+}
+
+.modal-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 300;
+}
+
+.modal-background {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(1, 23, 52, 0.5);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 420px;
+  max-height: 95vh;
+  overflow: scroll;
+}
+
+.modal-close {
+  align-self: flex-end;
+  min-height: 44px;
+  color: var(--pbc-g-blue-vibrant-50);
+  font-weight: 700;
+}
+
+.modal-close:hover {
+  cursor: pointer;
+}
+
+.modal-logo {
+  width: 70px;
+}
+
+.modal-view h1 {
+  font-size: 24px;
+  font-family: var(--pbc-g-font-display);
+  margin-top: 20px;
+  color: var(--sds-g-link-color-active);
+  line-height: 32px;
+}
+
+.modal-view h3 {
+  font-size: 16px;
+  font-family: var(--pbc-g-font-display);
+  line-height: 24px;
+}
+
+.modal-header {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.modal-signIn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.modal-signIn button {
+  width: 47%;
+  padding: 8px;
+  background-color: #fff;
+  border: 1px solid #c9c9c9;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.modal-signIn button img {
+  height: 16px;
+  margin-right: 8px;
+}
+
+.modal-divider {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  line-height: 0.1em;
+  margin: 40px 0 30px 0;
+}
+
+.modal-divider span {
+  background: #fff;
+  padding: 0 10px;
+}
+
+.modal-input {
+  margin-bottom: 16px;
+}
+
+.modal-input input,
+.modal-input label {
+  display: block;
+}
+
+.modal-input input,
+.modal-input select {
+  border-radius: 0.25em;
+  border-color: #5a5c61;
+  font-weight: 400;
+  border: solid 1px #5a5c61;
+  width: 100%;
+  padding: 0.5em;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.modal-input input:hover,
+.modal-input input:focus {
+  border-color: #0f2e5d;
+  background-color: #ecf5fd;
+}
+
+.modal-checkbox {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.modal-checkbox input {
+  margin-right: 8px;
+  margin-top: 3px;
+}
+
+.modal-checkbox label {
+  font-size: 13px;
+}
+
+.modal-button {
+  margin-bottom: 20px;
+}
+
+.modal-button .pbc-button {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.modal-subtext {
+  font-size: 13px;
+  text-align: center;
+}
+
+.modal-container a {
+  color: var(--pbc-g-blue-vibrant-50);
+  text-decoration: underline;
+}
+
+.modal-subtext img {
+  width: 12px;
+  margin-left: 4px;
+}
+
+.error-text {
+  color: var(--sds-g-color-error-base-contrast-1);
+  font-size: 12px;
+}
+
+.error-input {
+  border-color: var(--sds-g-color-error-base-contrast-1) !important;
+}
+
+.modal-step1,
+.modal-step2,
+.modal-step3,
+.modal-step5 {
+  max-width: 325px;
+}
+
+.modal-step4 {
+  max-width: 740px;
+}
+
+.modal-forum {
+  min-width: 740px;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0px 15px;
+}
+
+.modal-forum .modal-input {
+  width: 48%;
+}
+
+.modal-subLabel {
+  font-size: 12px;
+  color: var(--sds-g-color-palette-neutral-30);
+}
+
+.modal-confirmation {
+  width: 100%;
+  padding: 12px 16px;
+  -webkit-box-shadow: 0px 6px 15px -3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 6px 15px -3px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
