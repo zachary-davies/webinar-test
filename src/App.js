@@ -8,6 +8,10 @@ import Speakers from "./components/speakers/speakers";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSignedIn, setIsSignedIn] = useState(false);
+
+  const queryParameters = new URLSearchParams(window.location.search);
+  const variation = queryParameters.get("variation");
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -21,13 +25,19 @@ function App() {
 
   return (
     <div className="app">
-      <Header />
+      <Header signOut={() => setIsSignedIn(false)} variation={variation} />
       <div className="content">
-        <Hero openModal={openModal} />
+        <Hero openModal={openModal} signedIn={isSignedIn} />
         <Speakers />
       </div>
       <Footer />
-      {isModalOpen && <Modal closeModal={closeModal} />}
+      {isModalOpen && (
+        <Modal
+          closeModal={closeModal}
+          signIn={() => setIsSignedIn(true)}
+          variation={variation}
+        />
+      )}
     </div>
   );
 }

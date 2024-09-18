@@ -1,5 +1,25 @@
-option:disabled {
-  color: red;
+select {
+  width: 100%;
+  padding: 0.5em;
+  font-size: 16px;
+  line-height: 24px;
+  border: solid 1px #5a5c61;
+  border-radius: 0.25em;
+  background-image: url("../../images/switch.png");
+  background-size: 16px 16px;
+  background-position: 98% 50%;
+  background-repeat: no-repeat;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.input-invalid select {
+  border-color: #ea001e;
+}
+
+select:focus {
+  border-color: #0f2e5d;
+  background-color: #ecf5fd;
 }
 
 .modal-container {

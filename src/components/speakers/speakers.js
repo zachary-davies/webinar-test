@@ -17,7 +17,7 @@ const Speakers = () => {
             <img className="speakers-companyImage" src={speakerCompany} />
             <img src={speakerImg} />
           </div>
-          <h3>Chloe Coan</h3>
+          <h3>Allie K. Miller</h3>
           <p>Product Marketing Manager</p>
           <p className="speakers-subtext">Salesforce</p>
         </div>
@@ -27,7 +27,7 @@ const Speakers = () => {
             <img className="speakers-companyImage" src={speakerCompany2} />
             <img src={speakerImg2} />
           </div>
-          <h3>Adam Hooper</h3>
+          <h3>Adam Alfano</h3>
           <p>Head of Central Platforms</p>
           <p className="speakers-subtext">DPD</p>
         </div>

@@ -3,8 +3,6 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-import newWindowIcon from "../../../images/new-window-link.svg";
-
 const Step3 = (props) => {
   const { email, nextStep } = props;
 
@@ -28,8 +26,8 @@ const Step3 = (props) => {
         <p>Step 3 of 3</p>
         <h1>Check your inbox for your single-use code.</h1>
         <p style={{ margin: 0 }}>
-          Let’s get you verified. We sent an email to{" "}
-          <b>{email !== "" ? email : "testEmail@salesforce.com"}</b>
+          Let's get you verified. We sent an email to{" "}
+          <b>{email !== "" ? email : "testEmail@salesforce.com"}</b>.
         </p>
       </div>
 
@@ -58,14 +56,6 @@ const Step3 = (props) => {
           </button>
         </div>
       </form>
-
-      <div className="modal-subtext">
-        By continuing, you’ll be creating or accessing a <br />
-        <a src="#">
-          Trailblazer account
-          <img src={newWindowIcon} />
-        </a>
-      </div>
     </div>
   );
 };

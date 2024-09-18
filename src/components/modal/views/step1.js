@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/alt-text */
-
 import { useFormik } from "formik";
 import * as Yup from "yup";
+
 import salesForce from "../../../images/salesforce-with-type-logo.svg";
 import googleLogo from "../../../images/google_logo.png";
-import newWindowIcon from "../../../images/new-window-link.svg";
+import newWindowIcon from "../../../images/new-window-icon.svg";
 
 const Step1 = (props) => {
   const { nextStep, setEmail } = props;

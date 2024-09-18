@@ -3,7 +3,7 @@ import "./hero.css";
 import heroImg from "../../images/hero.png";
 
 const Hero = (props) => {
-  const { openModal } = props;
+  const { openModal, signedIn } = props;
 
   return (
     <div className="hero-container">
@@ -11,19 +11,15 @@ const Hero = (props) => {
       <div className="hero-backgroundElipse" />
       <div className="hero-leftContainer">
         <p style={{ fontSize: "16px", fontWeight: 700 }}>Webinars</p>
-        <h1>
-          How DPD Uses Low Code to Build Apps Fast on the Einstein 1 Platform
-        </h1>
+        <h1>Embracing an AI mindset in business and in life</h1>
         <p className="hero-subTitle">On-demand &bull; 60 minutes</p>
         <p className="hero-description">
-          66% of IT teams expect the demand for apps to increase, but only 26%
-          of IT departments are able to support all app development requests. In
-          this session, you’ll learn how DPD uses Salesforce’s low code tools to
-          tackle their backlog by building custom apps on the Einstein 1
-          Platform for teams across their organization. Join us to learn about
-          the apps that they’ve built, the tools they used, the value these apps
-          have delivered, and how they plan to embed AI into these apps with
-          Einstein.
+          Artificial Intelligence is not just transforming technology; it is
+          reshaping how we do business and how we function as a society. We all
+          know a bit more about AI than we did 18 months ago, but what does it
+          take to go from concept to action - how do we all better utilize AI?
+          Join us to delve into the profound implications of AI and how we can
+          harness its potential responsibly and ethically.
         </p>
         <div className="hero-badgeContainer">
           <div className="badge blue95">Einstein</div>
@@ -35,7 +31,7 @@ const Hero = (props) => {
           style={{ marginTop: "40px" }}
           onClick={openModal}
         >
-          Register to watch
+          {signedIn ? "Watch Video" : "Register to watch"}
         </button>
       </div>
 

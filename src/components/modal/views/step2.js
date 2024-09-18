@@ -3,8 +3,6 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-import newWindowIcon from "../../../images/new-window-link.svg";
-
 const Step2 = (props) => {
   const { nextStep } = props;
 
@@ -15,9 +13,9 @@ const Step2 = (props) => {
       consent: false,
     },
     validationSchema: Yup.object().shape({
-      country: Yup.string().required("Country is required."),
-      state: Yup.string().required("State is required."),
-      consent: Yup.boolean().oneOf([true], "Agreement is required"),
+      country: Yup.string().required("Select country/region."),
+      state: Yup.string().required("Select state/province."),
+      consent: Yup.boolean().oneOf([true], "This field is required"),
     }),
     onSubmit: () => {
       nextStep();
@@ -42,16 +40,17 @@ const Step2 = (props) => {
             value={formik.values.country}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
+            style={{ color: formik.values.country ? "#000" : "#747474" }}
             className={
               formik.touched.country && formik.errors.country
                 ? "error-input"
                 : ""
             }
           >
-            <option disabled value="">
-              Select a country
+            <option value="" disabled>
+              Select country/region
             </option>
-            <option value="USA">USA</option>
+            <option value="USA">United States</option>
           </select>
           {formik.touched.country && formik.errors.country ? (
             <span className="error-text">{formik.errors.country}</span>
@@ -59,18 +58,19 @@ const Step2 = (props) => {
         </div>
 
         <div className="modal-input">
-          <label htmlFor="state">State</label>
+          <label htmlFor="state">State/province</label>
           <select
             name="state"
             value={formik.values.state}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
+            style={{ color: formik.values.country ? "#000" : "#747474" }}
             className={
               formik.touched.state && formik.errors.state ? "error-input" : ""
             }
           >
             <option disabled value="">
-              Select a state
+              Select state/province
             </option>
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>
@@ -159,14 +159,6 @@ const Step2 = (props) => {
           </button>
         </div>
       </form>
-
-      <div className="modal-subtext">
-        By continuing, you’ll be creating or accessing a <br />
-        <a src="#">
-          Trailblazer account
-          <img src={newWindowIcon} />
-        </a>
-      </div>
     </div>
   );
 };
