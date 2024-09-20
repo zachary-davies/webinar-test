@@ -14,8 +14,12 @@ function App() {
   const variation = queryParameters.get("variation");
 
   const openModal = () => {
-    setIsModalOpen(true);
-    document.body.style.overflow = "hidden";
+    if (isSignedIn) {
+      window.open("https://google.com", "_blank", "noreferrer");
+    } else {
+      setIsModalOpen(true);
+      document.body.style.overflow = "hidden";
+    }
   };
 
   const closeModal = () => {

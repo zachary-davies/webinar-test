@@ -13,6 +13,7 @@ const Step5 = (props) => {
   useEffect(() => {
     signIn();
     const timer = setTimeout(() => {
+      window.open("https://google.com", "_blank", "noreferrer");
       closeModal();
     }, 10000);
     return () => clearTimeout(timer);
@@ -20,15 +21,15 @@ const Step5 = (props) => {
 
   return (
     <div className="modal-step5">
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <ConfettiExplosion
+          zIndex={999}
+          style={{ paddingLeft: "50px" }}
+          force={0.7}
+        />
+      </div>
       {!confirmation ? (
         <>
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <ConfettiExplosion
-              zIndex={999}
-              style={{ paddingLeft: "50px" }}
-              force={0.7}
-            />
-          </div>
           <div className="modal-header">
             <h1>Welcome!</h1>
             <h1 style={{ margin: 0 }}>You are registered!</h1>
@@ -49,12 +50,7 @@ const Step5 = (props) => {
         </>
       ) : (
         <>
-          <ConfettiExplosion
-            zIndex={999}
-            style={{ paddingLeft: "50px" }}
-            force={0.7}
-          />
-          <div className="modal-confirmation">
+          <div className="modal-confirmation" style={{ marginTop: "12px" }}>
             <h3>
               How DPD Uses Low Code to Build Apps Fast on the Einstein 1
               Platform
