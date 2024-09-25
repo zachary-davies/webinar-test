@@ -1,6 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useFormik } from "formik";
 import * as Yup from "yup";
+
+import phoneValidationSchema from "../../../phoneValidation";
+
 const Step4 = (props) => {
   const { nextStep } = props;
 
@@ -21,7 +24,7 @@ const Step4 = (props) => {
       jobRole: Yup.string(),
       company: Yup.string().required("Please enter company name."),
       email: Yup.string().email().required("Please enter work email."),
-      phone: Yup.string().required("Please enter phone number."),
+      phone: phoneValidationSchema,
     }),
     onSubmit: () => {
       nextStep();
@@ -100,7 +103,7 @@ const Step4 = (props) => {
             value={formik.values.jobRole}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            style={{ color: formik.values.country ? "#000" : "#747474" }}
+            style={{ color: formik.values.jobRole ? "#000" : "#747474" }}
             className={
               formik.touched.jobRole && formik.errors.jobRole
                 ? "error-input"
@@ -177,6 +180,7 @@ const Step4 = (props) => {
           <input
             type="tel"
             value={formik.values.phone}
+            placeholder="+123 4567890"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             name="phone"

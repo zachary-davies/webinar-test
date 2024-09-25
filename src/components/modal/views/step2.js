@@ -64,7 +64,7 @@ const Step2 = (props) => {
             value={formik.values.state}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            style={{ color: formik.values.country ? "#000" : "#747474" }}
+            style={{ color: formik.values.state ? "#000" : "#747474" }}
             className={
               formik.touched.state && formik.errors.state ? "error-input" : ""
             }
