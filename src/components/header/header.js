@@ -71,6 +71,17 @@ const Header = (props) => {
                 </div>
               </div>
             ) : null}
+
+            {variation !== "2" && (
+              <ul className="nav__utilityList">
+                <li className="nav__utilityItem">
+                  <span className="nav__userImage">
+                    <img src={userSVG} />
+                  </span>
+                  <span className="nav__login">Login</span>
+                </li>
+              </ul>
+            )}
           </div>
         </div>
       </header>

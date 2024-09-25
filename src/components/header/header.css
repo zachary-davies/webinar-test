@@ -199,6 +199,7 @@
 
   .nav__login {
     display: inline;
+    margin-left: 12px;
   }
 
   .nav__globe {
