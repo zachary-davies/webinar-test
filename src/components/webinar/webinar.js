@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Footer from "../footer/footer";
 import Header from "../header/header";
@@ -12,6 +12,10 @@ const Webinar = () => {
 
   const queryParameters = new URLSearchParams(window.location.search);
   const variation = queryParameters.get("variation");
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const openModal = () => {
     if (isSignedIn) {
