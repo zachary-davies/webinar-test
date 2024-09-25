@@ -1,8 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import IntlTelInput from "intl-tel-input/intlTelInputWithUtils";
-
 const Step4 = (props) => {
   const { nextStep } = props;
 
@@ -36,14 +34,6 @@ const Step4 = (props) => {
         <h1>Let's get you all signed up</h1>
         <p style={{ margin: 0 }}>We'll need a few details</p>
       </div>
-
-      <IntlTelInput
-        // any initialisation options from the readme will work here
-        initOptions={{
-          initialCountry: "us",
-          utilsScript: "/intl-tel-input/js/utils.js?1726074417015",
-        }}
-      />
 
       <form onSubmit={formik.handleSubmit} className="modal-forum">
         <div className="modal-input">
