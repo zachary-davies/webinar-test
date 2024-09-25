@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import IntlTelInput from "intl-tel-input/intlTelInputWithUtils";
 
 const Step4 = (props) => {
   const { nextStep } = props;
@@ -35,6 +36,14 @@ const Step4 = (props) => {
         <h1>Let's get you all signed up</h1>
         <p style={{ margin: 0 }}>We'll need a few details</p>
       </div>
+
+      <IntlTelInput
+        // any initialisation options from the readme will work here
+        initOptions={{
+          initialCountry: "us",
+          utilsScript: "/intl-tel-input/js/utils.js?1726074417015",
+        }}
+      />
 
       <form onSubmit={formik.handleSubmit} className="modal-forum">
         <div className="modal-input">
@@ -111,14 +120,26 @@ const Step4 = (props) => {
             <option disabled value="">
               Select a job role
             </option>
-            <option value="finance">Finance</option>
-            <option value="retail">Retail</option>
-            <option value="healthcare">Healthcare</option>
-            <option value="construction">Construction</option>
-            <option value="education">Education</option>
-            <option value="technology">Technology</option>
-            <option value="manufacturing">Manufacturing</option>
-            <option value="other">Other</option>
+            <option value="developer">Developer</option>
+            <option value="administrator">Administrator</option>
+            <option value="architect">Architect</option>
+            <option value="sales representative/manager">
+              Sales Representative / Manager
+            </option>
+            <option value="marketer">Marketer</option>
+            <option value="service agent/supervisor">
+              Service Agent / Supervisor
+            </option>
+            <option value="data analyst">Data Analyst</option>
+            <option value="consultant">Consultant</option>
+            <option value="business operations manager">
+              Business Operations Manager
+            </option>
+            <option value="designer">Designer</option>
+            <option value="educator">Educator</option>
+            <option value="student">Student</option>
+            <option value="executive">Executive</option>
+            <option value="product manager">Product Manager</option>
           </select>
           {formik.touched.jobRole && formik.errors.jobRole ? (
             <span className="error-text">{formik.errors.jobRole}</span>

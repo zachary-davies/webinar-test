@@ -25,7 +25,7 @@ const Header = (props) => {
                 <img className="nav__logoWords" src={logoType} />
                 <img className="nav__logo" src={logoNoType} />
               </div>
-              {variation === "3" ? null : (
+              {variation === "2" ? (
                 <ul className="nav__itemList nav__hide">
                   <li>Products</li>
                   <li>Industries</li>
@@ -38,9 +38,9 @@ const Header = (props) => {
                     More<span className="nav__moreArrow"></span>
                   </li>
                 </ul>
-              )}
+              ) : null}
             </div>
-            {variation === "3" ? null : (
+            {variation === "2" ? (
               <div className="nav__utility">
                 <ul className="nav__utilityList">
                   <li className="nav__utilityItem">
@@ -70,7 +70,7 @@ const Header = (props) => {
                   <span>Try for free</span>
                 </div>
               </div>
-            )}
+            ) : null}
           </div>
         </div>
       </header>
