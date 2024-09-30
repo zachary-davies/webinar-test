@@ -1350,8 +1350,6 @@ html {
       format("woff2"),
     url(https://a.sfdcstatic.com/shared/fonts/avant-garde/AvantGardeForSalesforceW05-Dm.woff)
       format("woff");
-  unicode-range: u+0000-007f, u+0080-00ff, u+0100-017f, u+0180-024f, u+1e??,
-    u+2c60-2c7f;
 }
 
 @font-face {

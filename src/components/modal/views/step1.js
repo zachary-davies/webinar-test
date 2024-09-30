@@ -28,7 +28,7 @@ const Step1 = (props) => {
   return (
     <div className="modal-step1">
       <div className="modal-header">
-        <h1>Let’s get you registered.</h1>
+        <h1>Let&#8217;s get you registered.</h1>
       </div>
 
       <div className="modal-signIn">

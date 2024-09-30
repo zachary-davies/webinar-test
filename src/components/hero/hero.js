@@ -12,7 +12,9 @@ const Hero = (props) => {
       <div className="hero-leftContainer">
         <p style={{ fontSize: "16px", fontWeight: 700 }}>Webinars</p>
         <h1>Embracing an AI mindset in business and in life</h1>
-        <p className="hero-subTitle">On-demand &bull; 60 minutes</p>
+        <p className="hero-subTitle">
+          Upcoming &bull; November 16, 2024 &bull; 09:00 AM PT &bull; 60 minutes
+        </p>
         <p className="hero-description">
           Artificial Intelligence is not just transforming technology; it is
           reshaping how we do business and how we function as a society. We all

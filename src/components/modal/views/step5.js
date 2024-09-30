@@ -50,6 +50,14 @@ const Step5 = (props) => {
         </>
       ) : (
         <>
+          <div className="modal-header">
+            <h1>Welcome!</h1>
+            <h1 style={{ margin: 0 }}>You are registered!</h1>
+            <p>
+              We’ll send a reminder email with a link and details prior to the
+              event.
+            </p>
+          </div>
           <div className="modal-confirmation" style={{ marginTop: "12px" }}>
             <h3>
               How DPD Uses Low Code to Build Apps Fast on the Einstein 1

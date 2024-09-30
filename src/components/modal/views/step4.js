@@ -180,7 +180,6 @@ const Step4 = (props) => {
           <input
             type="tel"
             value={formik.values.phone}
-            placeholder="+123 4567890"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             name="phone"
