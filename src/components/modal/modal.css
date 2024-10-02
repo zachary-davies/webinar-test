@@ -39,9 +39,9 @@ select:focus {
 
 .modal-content {
   position: absolute;
-  top: 50%;
+  top: 40px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0);
   border-radius: 8px;
   padding: 20px;
   background-color: #fff;

@@ -1,0 +1,73 @@
+.ondemandHero-container {
+  padding: 20px 20px 150px 20px;
+  display: flex;
+  gap: 40px;
+  position: relative;
+  margin-bottom: 120px;
+}
+
+.ondemandHero-background {
+  position: absolute;
+  top: 60%;
+  left: -40px;
+  width: 120%;
+  height: 60%;
+  background-repeat: no-repeat;
+}
+
+/* .hero-backgroundElipse {
+  bottom: 0;
+  left: -50px;
+  width: 120%;
+  height: 20%;
+  background-color: #fff;
+  clip-path: ellipse(50% 100% at 45% 120%);
+}  */
+
+.ondemandHero-leftContainer,
+.ondemandHero-rightContainer {
+  z-index: 20;
+}
+
+.ondemandHero-leftContainer {
+  flex: 2;
+}
+
+.ondemandHero-leftContainer h1 {
+  font-size: 48px;
+  font-family: var(--pbc-g-font-display);
+  margin-top: 0;
+  color: var(--sds-g-link-color-active);
+  line-height: 56px;
+}
+
+.ondemandHero-subTitle {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.ondemandHero-description {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.ondemandHero-badgeContainer {
+  margin-bottom: 20px;
+}
+
+.ondemandHero-badgeContainer .badge {
+  margin-right: 8px;
+  background-color: var(--sds-g-color-palette-cloud-blue-90);
+}
+
+.ondemandHero-rightContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ondemandHero-rightContainer div,
+.ondemandHero-rightContainer div img {
+  float: right;
+}

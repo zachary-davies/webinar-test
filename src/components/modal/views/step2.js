@@ -8,7 +8,7 @@ const Step2 = (props) => {
 
   const formik = useFormik({
     initialValues: {
-      country: "",
+      country: "USA",
       state: "",
       consent: false,
     },
@@ -50,7 +50,9 @@ const Step2 = (props) => {
             <option value="" disabled>
               Select country/region
             </option>
-            <option value="USA">United States</option>
+            <option default value="USA">
+              United States
+            </option>
           </select>
           {formik.touched.country && formik.errors.country ? (
             <span className="error-text">{formik.errors.country}</span>

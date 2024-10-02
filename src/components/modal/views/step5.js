@@ -12,12 +12,14 @@ const Step5 = (props) => {
 
   useEffect(() => {
     signIn();
-    const timer = setTimeout(() => {
-      window.open("https://google.com", "_blank", "noreferrer");
-      closeModal();
-    }, 10000);
-    return () => clearTimeout(timer);
-  }, [signIn, closeModal]);
+    if (!confirmation) {
+      const timer = setTimeout(() => {
+        window.open("https://google.com", "_blank", "noreferrer");
+        closeModal();
+      }, 10000);
+      return () => clearTimeout(timer);
+    }
+  }, [signIn, closeModal, confirmation]);
 
   return (
     <div className="modal-step5">
@@ -32,7 +34,7 @@ const Step5 = (props) => {
         <>
           <div className="modal-header">
             <h1>Welcome!</h1>
-            <h1 style={{ margin: 0 }}>You are registered!</h1>
+            <h1 style={{ margin: 0 }}>You are registered.</h1>
             <p>
               In a few seconds we'll automatically log you in to your
               experience.
@@ -52,7 +54,7 @@ const Step5 = (props) => {
         <>
           <div className="modal-header">
             <h1>Welcome!</h1>
-            <h1 style={{ margin: 0 }}>You are registered!</h1>
+            <h1 style={{ margin: 0 }}>You are registered.</h1>
             <p>
               We’ll send a reminder email with a link and details prior to the
               event.

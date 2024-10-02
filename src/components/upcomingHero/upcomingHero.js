@@ -1,16 +1,14 @@
 /* eslint-disable jsx-a11y/alt-text */
-import "./hero.css";
+import "./upcomingHero.css";
 import heroImg from "../../images/hero.png";
 
-const Hero = (props) => {
+const UpcomingHero = (props) => {
   const { openModal, signedIn } = props;
 
   return (
     <div className="hero-container">
-      <div className="hero-backgroundColor" />
-      <div className="hero-backgroundElipse" />
       <div className="hero-leftContainer">
-        <p style={{ fontSize: "16px", fontWeight: 700 }}>Webinars</p>
+        <p style={{ fontSize: "16px", fontWeight: 700 }}>Webinar</p>
         <h1>Embracing an AI mindset in business and in life</h1>
         <p className="hero-subTitle">
           Upcoming &bull; November 16, 2024 &bull; 09:00 AM PT &bull; 60 minutes
@@ -33,7 +31,7 @@ const Hero = (props) => {
           style={{ marginTop: "40px" }}
           onClick={openModal}
         >
-          {signedIn ? "Watch Video" : "Register to watch"}
+          Watch now
         </button>
       </div>
 
@@ -151,4 +149,4 @@ const Hero = (props) => {
   );
 };
 
-export default Hero;
+export default UpcomingHero;

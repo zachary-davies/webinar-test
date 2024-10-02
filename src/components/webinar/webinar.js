@@ -2,9 +2,11 @@ import { useState, useEffect } from "react";
 
 import Footer from "../footer/footer";
 import Header from "../header/header";
-import Hero from "../hero/hero";
+import UpcomingHero from "../upcomingHero/upcomingHero";
 import Modal from "../modal/modal";
 import Speakers from "../speakers/speakers";
+import Products from "../products/products";
+import OndemandHero from "../ondemandHero/ondemandHero";
 
 const Webinar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -35,8 +37,13 @@ const Webinar = () => {
       {" "}
       <Header signOut={() => setIsSignedIn(false)} variation={variation} />
       <div className="content">
-        <Hero openModal={openModal} signedIn={isSignedIn} />
+        {variation === "1" ? (
+          <OndemandHero />
+        ) : (
+          <UpcomingHero openModal={openModal} signedIn={isSignedIn} />
+        )}
         <Speakers />
+        <Products />
       </div>
       <Footer />
       {isModalOpen && (
