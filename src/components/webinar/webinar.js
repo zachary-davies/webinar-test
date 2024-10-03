@@ -14,17 +14,18 @@ const Webinar = () => {
   const [isSignedIn, setIsSignedIn] = useState(false);
 
   const queryParameters = new URLSearchParams(window.location.search);
-  const variation = queryParameters.get("variation");
+  const variation = queryParameters.get("variation") || "upcoming";
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   const openModal = () => {
-    console.log("openModal");
-    if (isSignedIn) {
+    if (isSignedIn && variation === "ondemand") {
       const imageUrl = window.location.origin + on24;
       window.open(imageUrl, "_blank");
+    } else if (isSignedIn && variation !== "ondemand") {
+      window.open("https://google.com", "_blank");
     } else {
       setIsModalOpen(true);
       document.body.style.overflow = "hidden";

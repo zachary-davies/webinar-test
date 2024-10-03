@@ -65,11 +65,8 @@ const Step5 = (props) => {
             </p>
           </div>
           <div className="modal-confirmation" style={{ marginTop: "12px" }}>
-            <h3>
-              How DPD Uses Low Code to Build Apps Fast on the Einstein 1
-              Platform
-            </h3>
-            <span>Jul 16, 9:00 AM – 60 minutes</span>
+            <h3>Embracing an AI mindset in business and in life</h3>
+            <span>Nov 16, 2024, 9:00 AM – 60 minutes</span>
           </div>
           <h3 style={{ color: "#032D60", textAlign: "center" }}>
             Add to calendar

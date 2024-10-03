@@ -62,9 +62,8 @@ const Header = (props) => {
                   </li>
                   <li className="nav__utilityItem">
                     <span className="nav__userImage">
-                      <img src={userSVG} />
+                      {signedIn ? <img src={profile} /> : <img src={userSVG} />}
                     </span>
-                    <span className="nav__login"></span>
                   </li>
                 </ul>
                 <div className="nav__cta">

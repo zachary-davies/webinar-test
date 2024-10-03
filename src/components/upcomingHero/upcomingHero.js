@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import "./upcomingHero.css";
 import heroImg from "../../images/hero.png";
+import checkmark from "../../images/checkmark.svg";
 
 const UpcomingHero = (props) => {
   const { openModal, signedIn } = props;
@@ -25,10 +26,20 @@ const UpcomingHero = (props) => {
           <div className="badge blue95">Einstein</div>
           <div className="badge blue95">Customer 360 Platform</div>
         </div>
+
+        {signedIn && (
+          <p style={{ fontWeight: "700", color: "#032D60", fontSize: "16px" }}>
+            <img
+              src={checkmark}
+              style={{ width: "16px", marginRight: "8px" }}
+            />
+            You are registered!
+          </p>
+        )}
         <button
           className="pbc-button"
           data-variant="primary"
-          style={{ marginTop: "40px" }}
+          style={{ marginTop: "20px" }}
           onClick={openModal}
         >
           {signedIn ? "Add to calendar" : "Register to watch"}

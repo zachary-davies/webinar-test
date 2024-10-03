@@ -5,7 +5,7 @@ import Webinar from "./components/webinar/webinar";
 import Email from "./components/email/email";
 
 function App() {
-  const [view, setView] = useState("email2");
+  const [view, setView] = useState("email");
 
   return (
     <div className="app">
