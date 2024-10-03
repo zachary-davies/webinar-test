@@ -19,7 +19,6 @@ const Speakers = () => {
               className="speakers-speakerImage"
               style={{
                 backgroundImage: `url(${speakerImg})`,
-                backgroundPosition: "50% 0%",
               }}
             >
               <div className="speakers-companyImage">
@@ -38,7 +37,6 @@ const Speakers = () => {
               className="speakers-speakerImage"
               style={{
                 backgroundImage: `url(${speakerImg2})`,
-                backgroundPosition: "50% 0%",
               }}
             >
               <div className="speakers-companyImage">
@@ -57,9 +55,6 @@ const Speakers = () => {
               className="speakers-speakerImage"
               style={{
                 backgroundImage: `url(${speakerImg3})`,
-                backgroundColor: "#f9d75a",
-                backgroundPosition: "50% 0%",
-                backgroundSize: "105%",
               }}
             >
               <div className="speakers-companyImage">
