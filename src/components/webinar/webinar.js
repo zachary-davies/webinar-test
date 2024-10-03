@@ -7,6 +7,7 @@ import Modal from "../modal/modal";
 import Speakers from "../speakers/speakers";
 import Products from "../products/products";
 import OndemandHero from "../ondemandHero/ondemandHero";
+import on24 from "../../images/on24.png";
 
 const Webinar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -20,8 +21,10 @@ const Webinar = () => {
   }, []);
 
   const openModal = () => {
+    console.log("openModal");
     if (isSignedIn) {
-      window.open("https://google.com", "_blank", "noreferrer");
+      const imageUrl = window.location.origin + on24;
+      window.open(imageUrl, "_blank");
     } else {
       setIsModalOpen(true);
       document.body.style.overflow = "hidden";
@@ -34,11 +37,14 @@ const Webinar = () => {
   };
   return (
     <>
-      {" "}
-      <Header signOut={() => setIsSignedIn(false)} variation={variation} />
+      <Header
+        signOut={() => setIsSignedIn(false)}
+        variation={variation}
+        signedIn={isSignedIn}
+      />
       <div className="content">
-        {variation === "1" ? (
-          <OndemandHero />
+        {variation === "ondemand" ? (
+          <OndemandHero openModal={openModal} />
         ) : (
           <UpcomingHero openModal={openModal} signedIn={isSignedIn} />
         )}

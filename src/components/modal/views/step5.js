@@ -6,6 +6,8 @@ import googleLogo from "../../../images/google_logo.png";
 import appleLogo from "../../../images/apple_icon.svg";
 import outlookLogo from "../../../images/outlook_logo.png";
 import yahooLogo from "../../../images/yahoo_logo.png";
+import newWindowIcon from "../../../images/new-window-icon-white.svg";
+import on24 from "../../../images/on24.png";
 
 const Step5 = (props) => {
   const { signIn, closeModal, confirmation } = props;
@@ -14,7 +16,8 @@ const Step5 = (props) => {
     signIn();
     if (!confirmation) {
       const timer = setTimeout(() => {
-        window.open("https://google.com", "_blank", "noreferrer");
+        const imageUrl = window.location.origin + on24;
+        window.open(imageUrl, "_blank");
         closeModal();
       }, 10000);
       return () => clearTimeout(timer);
@@ -47,8 +50,9 @@ const Step5 = (props) => {
               onClick={closeModal}
             >
               Continue
+              <img style={{ marginLeft: "8px" }} src={newWindowIcon} />
             </button>
-          </div>{" "}
+          </div>
         </>
       ) : (
         <>

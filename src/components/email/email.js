@@ -14,12 +14,12 @@ const Email = (props) => {
   return (
     <div style={{ position: "relative" }}>
       <img width={"100%"} src={email1} />
-      <a class="clickable" onClick={changeView}>
+      <a className="clickable" onClick={changeView}>
         <img width={"100%"} src={email2} />
       </a>
       <img width={"100%"} src={email3} />
       <img width={"100%"} src={email4} />
-      <a class="clickable" onClick={changeView}>
+      <a className="clickable" onClick={changeView}>
         <img width={"100%"} src={email5} />
       </a>
       <img width={"100%"} src={email6} />

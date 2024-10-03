@@ -7,9 +7,10 @@ import logoNoType from "../../images/salesforce-no-type-logo.svg";
 import globeSVG from "../../images/globe.svg";
 import searchSVG from "../../images/search.svg";
 import userSVG from "../../images/user.svg";
+import profile from "../../images/profile.png";
 
 const Header = (props) => {
-  const { signOut, variation } = props;
+  const { signOut, variation, signedIn } = props;
 
   return (
     <>
@@ -25,7 +26,7 @@ const Header = (props) => {
                 <img className="nav__logoWords" src={logoType} />
                 <img className="nav__logo" src={logoNoType} />
               </div>
-              {variation === "2" ? (
+              {variation === "upcomingNav" ? (
                 <ul className="nav__itemList nav__hide">
                   <li>Products</li>
                   <li>Industries</li>
@@ -40,7 +41,7 @@ const Header = (props) => {
                 </ul>
               ) : null}
             </div>
-            {variation === "2" ? (
+            {variation === "upcomingNav" ? (
               <div className="nav__utility">
                 <ul className="nav__utilityList">
                   <li className="nav__utilityItem">
@@ -72,13 +73,13 @@ const Header = (props) => {
               </div>
             ) : null}
 
-            {variation !== "2" && (
+            {variation !== "upcomingNav" && (
               <ul className="nav__utilityList">
                 <li className="nav__utilityItem">
                   <span className="nav__userImage">
-                    <img src={userSVG} />
+                    {signedIn ? <img src={profile} /> : <img src={userSVG} />}
                   </span>
-                  <span className="nav__login">Login</span>
+                  {!signedIn && <span className="nav__login">Login</span>}
                 </li>
               </ul>
             )}

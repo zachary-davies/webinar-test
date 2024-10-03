@@ -27,7 +27,7 @@ const Step2 = (props) => {
       <div className="modal-header">
         <p>Step 2 of 3</p>
         <h1>Where are you located?</h1>
-        <p style={{ margin: 0 }}>
+        <p style={{ margin: "20px 0 0 0" }}>
           We want to make sure you see the account terms for your area.
         </p>
       </div>

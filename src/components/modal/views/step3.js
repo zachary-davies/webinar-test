@@ -56,6 +56,12 @@ const Step3 = (props) => {
           </button>
         </div>
       </form>
+      <div className="modal-subtext">
+        Didn't get the email? <br />
+        Check your spam folder. If you still can't find it,
+        <br />
+        <a src="#">resend the email.</a>
+      </div>
     </div>
   );
 };

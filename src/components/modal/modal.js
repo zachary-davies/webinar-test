@@ -39,17 +39,17 @@ const Modal = (props) => {
           )}
           {stepCount === 2 && <Step2 nextStep={nextStep} />}
           {stepCount === 3 && <Step3 nextStep={nextStep} email={email} />}
-          {stepCount === 4 && variation === "1" && (
+          {stepCount === 4 && variation === "ondemand" && (
             <Step5 signIn={signIn} closeModal={closeModal} />
           )}
-          {stepCount === 4 && variation !== "1" && (
+          {stepCount === 4 && variation !== "ondemand" && (
             <Step4 nextStep={nextStep} />
           )}
           {stepCount === 5 && (
             <Step5
               signIn={signIn}
               closeModal={closeModal}
-              confirmation={variation !== "1"}
+              confirmation={variation !== "ondemand"}
             />
           )}
         </div>

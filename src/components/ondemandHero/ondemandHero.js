@@ -3,7 +3,7 @@ import "./ondemandHero.css";
 import heroImg from "../../images/hero-landscape.png";
 
 const OndemandHero = (props) => {
-  const { openModal, signedIn } = props;
+  const { openModal } = props;
 
   return (
     <div className="ondemandHero-container">
@@ -12,7 +12,7 @@ const OndemandHero = (props) => {
         style={{ backgroundImage: `url(${heroImg})` }}
       />
       <div className="ondemandHero-leftContainer">
-        <p style={{ fontSize: "16px", fontWeight: 700 }}>Webinars</p>
+        <p style={{ fontSize: "16px", fontWeight: 700 }}>Webinar</p>
 
         <h1>Embracing an AI mindset in business and in life</h1>
 
@@ -143,7 +143,7 @@ const OndemandHero = (props) => {
           style={{ marginTop: "40px" }}
           onClick={openModal}
         >
-          {signedIn ? "Watch Video" : "Register to watch"}
+          Watch now
         </button>
       </div>
 

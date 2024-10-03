@@ -10,14 +10,14 @@ const Products = () => {
       <h1>Products Featured</h1>
 
       <div className="products-contentContainer">
-        <div class="products-item">
+        <div className="products-item">
           <div className="products-itemImage">
             <img src={einsteinImage} />
           </div>
           <p>Einstein AI</p>
         </div>
 
-        <div class="products-item">
+        <div className="products-item">
           <div className="products-itemImage">
             <img src={threeSixtyImage} />
           </div>

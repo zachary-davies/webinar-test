@@ -31,7 +31,7 @@ const UpcomingHero = (props) => {
           style={{ marginTop: "40px" }}
           onClick={openModal}
         >
-          Watch now
+          {signedIn ? "Add to calendar" : "Register to watch"}
         </button>
       </div>
 

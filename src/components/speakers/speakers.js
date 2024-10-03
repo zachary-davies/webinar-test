@@ -16,7 +16,7 @@ const Speakers = () => {
         <div className="speakers-column">
           <div style={{ display: "flex", marginBottom: "20px" }}>
             <div
-              class="speakers-speakerImage"
+              className="speakers-speakerImage"
               style={{
                 backgroundImage: `url(${speakerImg})`,
                 backgroundPosition: "50% 0%",
@@ -35,7 +35,7 @@ const Speakers = () => {
         <div className="speakers-column">
           <div style={{ display: "flex", marginBottom: "20px" }}>
             <div
-              class="speakers-speakerImage"
+              className="speakers-speakerImage"
               style={{
                 backgroundImage: `url(${speakerImg2})`,
                 backgroundPosition: "50% 0%",
@@ -54,7 +54,7 @@ const Speakers = () => {
         <div className="speakers-column">
           <div style={{ display: "flex", marginBottom: "20px" }}>
             <div
-              class="speakers-speakerImage"
+              className="speakers-speakerImage"
               style={{
                 backgroundImage: `url(${speakerImg3})`,
                 backgroundColor: "#f9d75a",
