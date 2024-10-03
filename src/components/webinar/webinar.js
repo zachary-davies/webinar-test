@@ -9,12 +9,10 @@ import Products from "../products/products";
 import OndemandHero from "../ondemandHero/ondemandHero";
 import on24 from "../../images/on24.png";
 
-const Webinar = () => {
+const Webinar = (props) => {
+  const { variation } = props;
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSignedIn, setIsSignedIn] = useState(false);
-
-  const queryParameters = new URLSearchParams(window.location.search);
-  const variation = queryParameters.get("variation") || "upcoming";
 
   useEffect(() => {
     window.scrollTo(0, 0);

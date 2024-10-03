@@ -17,6 +17,13 @@
   align-items: center;
 }
 
+.email-content a {
+  color: rgb(25, 45, 91);
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
 .email-content > p {
   margin: 100px 0;
   max-width: 750px;

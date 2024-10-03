@@ -4,3 +4,11 @@
 .content {
   padding: 0 40px;
 }
+
+h1 {
+  font-size: 48px;
+  font-family: var(--pbc-g-font-display);
+  margin-top: 0;
+  color: var(--sds-g-link-color-active);
+  line-height: 56px;
+}
