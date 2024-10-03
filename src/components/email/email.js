@@ -74,6 +74,7 @@ const Email = (props) => {
               className="pbc-button"
               data-variant="primary"
               style={{ margin: "40px auto 100px" }}
+              onClick={changeView}
             >
               Watch now
             </button>
