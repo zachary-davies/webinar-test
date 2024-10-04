@@ -24,6 +24,12 @@ const Step5 = (props) => {
     }
   }, [signIn, closeModal, confirmation]);
 
+  const confirmationClose = () => {
+    const imageUrl = window.location.origin + on24;
+    window.open(imageUrl, "_blank");
+    closeModal();
+  };
+
   return (
     <div className="modal-step5">
       <div style={{ display: "flex", justifyContent: "center" }}>
@@ -47,7 +53,7 @@ const Step5 = (props) => {
             <button
               className="pbc-button"
               data-variant="primary"
-              onClick={closeModal}
+              onClick={confirmationClose}
             >
               Continue
               <img style={{ marginLeft: "8px" }} src={newWindowIcon} />
