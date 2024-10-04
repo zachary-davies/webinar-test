@@ -4,7 +4,7 @@ import { parsePhoneNumber } from "libphonenumber-js";
 const phoneValidationSchema = yup
   .string()
   .required("Phone number is required")
-  .test("is-country-code", "Invalid country code", (value) => {
+  .test("is-country-code", "Enter a valid country code.", (value) => {
     if (!value) return false; // Required field, so reject empty values
     try {
       // Attempt to parse the phone number, which automatically detects the country code
@@ -21,7 +21,7 @@ const phoneValidationSchema = yup
       return true;
     }
   })
-  .test("is-too-short", "Phone too short", (value) => {
+  .test("is-too-short", "Phone number is too short.", (value) => {
     if (!value) return false; // Required field, so reject empty values
     try {
       // Attempt to parse the phone number, which automatically detects the country code
@@ -38,7 +38,7 @@ const phoneValidationSchema = yup
       return true;
     }
   })
-  .test("is-too-long", "Phone too long", (value) => {
+  .test("is-too-long", "Phone number is too long.", (value) => {
     if (!value) return false; // Required field, so reject empty values
     try {
       // Attempt to parse the phone number, which automatically detects the country code
@@ -55,7 +55,7 @@ const phoneValidationSchema = yup
       return true;
     }
   })
-  .test("is-valid-phone", "Invalid phone number", (value) => {
+  .test("is-valid-phone", "Enter a valid phone number.", (value) => {
     if (!value) return false; // Required field, so reject empty values
 
     try {
